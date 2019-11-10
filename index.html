@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <img id="logo" src="assets/logo2.png">
+    <img id="moreStart" src="assets/3-lines.png" onclick="expand()">
+    <div id="menuHiddenStart">
+      <div id="menuInner">
+        <h1>Choose your <a id="highlight">holiday</a></h1>
+
+        <h2>Home location</h2>
+        <p id="location"></p>
+        <p id="changeLocation">Change</p>
+
+        <h2>Travel time</h2>
+        <input id="travelTime" style="text-align: center;" type="number" name="points" value="2" step="0.5">
+        <p id="hourLabel">hours</p>
+
+        <h2>Dates</h2>
+        <label id="dateLabel">From : </label><input type="date" id="startDate"><br>
+        <label id="dateLabel">To : </label><input type="date" id="endDate">
+
+        <h2>Type of holiday</h2>
+        <div id="sportUnexpanded">
+          <p id="holidayType" onclick="toggleSport()">Sport</p>
+          <img id="arrowDown1" src="assets/arrow.png" onclick="toggleSport()">
+          <div id="sport" onclick="findBestSpots()">Kite surfing</div>
+          <div id="sport">Surfing</div>
+          <div id="sport">Skiing</div>
+        </div>
+        <div id="weatherUnexpanded">
+          <p id="holidayType" onclick="toggleWeather()">Nice weather</p>
+          <img id="arrowDown2" src="assets/arrow.png" onclick="toggleWeather()">
+        </div>
+
+      </div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCVYrNusxlZ8UQJopNpKm7M_3XIFK7mhw&callback=initMap"></script>
+
+  </body>
+</html>
+
+<!--AIzaSyCCVYrNusxlZ8UQJopNpKm7M_3XIFK7mhw-->

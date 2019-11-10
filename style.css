@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@keyframes menuAppear{
+  0%{left: -360;}
+  100%{left: 0;}
+}
+@keyframes menuDisappear{
+  0%{left: 0;}
+  100%{left: -360;}
+}
+
+@keyframes moveRight{
+  0%{left: 50;}
+  100%{left: 410;}
+}
+@keyframes moveLeft{
+  0%{left: 410;}
+  100%{left: 50;}
+}
+
+@keyframes expandHolidayType{
+  0%{height: 30;}
+  100%{height: 300;}
+}
+@keyframes unexpandHolidayType{
+  0%{height: 300;}
+  100%{height: 30;}
+}
+
+@keyframes rotateUp{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(180deg);}
+}
+@keyframes rotateDown{
+  0%{transform: rotate(180deg);}
+  100%{transform: rotate(0deg);}
+}
+
+#map{
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#highlight{
+  color: rgb(96, 149, 213);
+}
+
+#logo{
+  position: absolute;
+  right: 43.5%;
+  top: 25;
+  width: 13%;
+  min-width:60px;
+  height: auto;
+}
+
+#moreStart {
+  position: absolute;
+  left: 50;
+  top: 50;
+  width: 3%;
+  min-width:40px;
+  height: auto;
+}
+#more{
+  position: absolute;
+  left: 50;
+  top: 50;
+  width: 3%;
+  min-width:40px;
+  height: auto;
+  animation-name: moveLeft;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+#less{
+  position: absolute;
+  left: 410px;
+  top: 50;
+  width: 3%;
+  min-width:40px;
+  height: auto;
+  animation-name: moveRight;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+#menuHiddenStart {
+  position: absolute;
+  left: -360px;
+  top: 0;
+  height: 100%;
+  width: 200px;
+}
+#menuHidden {
+  position: absolute;
+  left: -360;
+  top: 0;
+  height: 100%;
+  width: 360px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: menuDisappear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 360px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: menuAppear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  overflow: scroll;
+}
+
+#menuInner{
+  margin-left: 25px;
+  margin-top: 50px;
+}
+
+h2{
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+#location {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#changeLocation{
+  margin-left: 10px;
+  margin-top: -10px;
+  color: rgb(96, 149, 213);
+  font-weight: bold;
+}
+#changeLocation:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 10px;
+  margin-top: -10px;
+  color: rgb(96, 149, 213);
+  font-weight: bold;
+}
+
+#travelTime{
+  display: inline-block;
+  margin-left: 13px;
+  width: 40px;
+}
+#hourLabel{
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#dateLabel{
+  margin-left: 10px;
+}
+#startDate{
+  margin-left: 10px;
+}
+#endDate{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#holidayType{
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: white;
+  width: 80%;
+}
+
+#arrowDown1{
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 12px;
+  animation-name: rotateDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+#arrowUp1{
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 12px;
+  transform: rotate(180deg);
+  animation-name: rotateUp;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+#arrowDown2{
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 12px;
+  animation-name: rotateDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+#arrowUp2{
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 12px;
+  transform: rotate(180deg);
+  animation-name: rotateUp;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+
+#sportUnexpanded{
+  margin-left: 10px;
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 7px;
+  padding-top: 1px;
+  height: 30px;
+  width: 250px;
+  animation-name: unexpandHolidayType;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  overflow: hidden;
+}
+#sportExpanded{
+  margin-left: 10px;
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 7px;
+  padding-top: 1px;
+  height: 300px;
+  width: 250px;
+  animation-name: expandHolidayType;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  overflow: hidden;
+}
+
+#sport{
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 80%;
+  height: 25px;
+  border-radius: 5px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: rgb(62, 150, 117);
+}
+
+#weatherUnexpanded{
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 7px;
+  padding-top: 1px;
+  height: 30px;
+  width: 250px;
+  animation-name: unexpandHolidayType;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+#weatherExpanded{
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 7px;
+  padding-top: 1px;
+  height: 300px;
+  width: 250px;
+  animation-name: expandHolidayType;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  overflow: hidden;
+}
